@@ -1,0 +1,22 @@
+{% form_theme staff_form 'bootstrap_5_layout.html.twig'%}
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NoteController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h2 class="TD">Add Staff</h2>
+        {{form_start(staff_form)}}
+        {{form_widget(staff_form)}}
+        
+        <input type="submit" value="Submit" class="btn btn-danger"/>
+        <br>
+        {{form_end(staff_form)}}
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"/>
+<link rel="stylesheet" href="{{asset('cssK/Staffindex.css')}}"/>
+{% endblock %}
